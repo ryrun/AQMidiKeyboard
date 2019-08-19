@@ -56,7 +56,10 @@ function init() {
             "None (Default)",
             "+3   Minor third",
             "+4   Major third",
-            "+7   Perfect fifth"
+            "+5   Perfect fourth",
+            "+7   Perfect fifth",
+            "+12  Octave",
+            "+16  Oldschool xD"
         ], "None (Default)");
     multinoteSetting.addValueObserver(function (value) {
         var newmultinote = null;
