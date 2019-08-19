@@ -1,13 +1,13 @@
 loadAPI(6);
 host.defineController("Generic", "AQ Midi Keyboard", "1.0", "797E74F0-C29F-11E9-BB97-0800200C9A66");
 host.defineMidiPorts(1, 0);
-prefs = host.getPreferences();
 
 transpose = 0;
 multinote = 0;
 transposeArr = [];
 
 function init() {
+    prefs = host.getPreferences();
     allChannels = host.getMidiInPort(0);
     notes = allChannels.createNoteInput("Midi Notes", "8?????", "9?????", "D?????", "E?????", "A?????");
     notes.setShouldConsumeEvents(false);
