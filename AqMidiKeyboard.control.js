@@ -14,7 +14,7 @@ function init() {
     allChannels.setMidiCallback(onMidi);
 
     //Transpose settings
-    var transposeSetting = prefs.getEnumSetting("Tranpose notes (white keys)", "Settings",
+    var transposeSetting = prefs.getEnumSetting("Tranpose notes (white keys in scale)", "Settings",
         [
             "-7   D minor / F major",
             "-6   D# minor / F# major",
@@ -98,7 +98,6 @@ function onMidi(status, data1, data2) {
     if (multinote > 0) {
         new_data1 = data1 + transpose + multinote;
         if (new_data1 >= 0 && new_data1 <= 127 - (transpose + 7) && (status === 144 || status === 128)) {
-            printMidi(status, data1, data2);
             notes.sendRawMidiEvent(status, new_data1, data2);
         }
     }

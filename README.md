@@ -9,7 +9,7 @@ Just copy `AqMidiKeyboard.contro.js` to following folders:
 - Linux / Mac: `~/Documents/Bitwig Studio/Controller Scripts/`
 
 ## Transpose notes
-It just transpose the notes, so it should be in scale.
+It just transpose the notes, so white keys should be in selected scale.
 
 ![](screenshot1.png)
 
